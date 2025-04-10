@@ -1,5 +1,4 @@
 [package]
-
 name = "freetype-sys"
 version = "0.23.0"
 authors = ["Coeuvre <coeuvre@gmail.com>"]
@@ -15,9 +14,10 @@ edition = "2018"
 
 [features]
 bundled = []
+png = ["dep:libz-sys"]
 
 [dependencies]
-libz-sys = "1.1.20"
+libz-sys = { version = "1.1.20", optional = true }
 
 [build-dependencies]
 cc = "1"
